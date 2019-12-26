@@ -1,5 +1,132 @@
 #+TITLE: dotfiles
 
+This file contains the configurations for the programs I use.
+
 * bash
+  :PROPERTIES:
+  :header-args: :tangle ~/.bashrc
+  :END:
+** preamble
+   #+BEGIN_SRC bash
+     # This file was generated from dotfiles.org. Any changes made here will be
+     # overwritten.
+   #+END_SRC
+
+** aliases
+   #+BEGIN_SRC bash
+     # grep colors
+     alias 'grep'='grep --color=auto'
+     alias 'egrep'='egrep --color=auto'
+     alias 'fgrep'='fgrep --color=auto'
+     # git
+     alias 'gaa'='git add --all'
+     alias 'gcmsg'='git commit -m'
+     alias 'gd'='git diff'
+     alias 'glog'='git log --graph --pretty="%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --all'
+     alias 'gst'='git status'
+     # other
+     alias '..'='cd ..'
+     alias '...'='cd ../..'
+     alias '?'='echo $?'
+     alias 'c'='clear'
+     alias 'ec'="TERM=xterm emacsclient -tty -a \"\""
+     alias 'exip'='curl ifconfig.co'
+     alias 'l'='ls --color -Fahl'
+     alias 'ls'='ls --color=auto'
+     alias 'less'='less -RMI'
+     alias 'lisp'='rlwrap -pGreen -O "\*" -S "λ " -ri -q\" sbcl --noinform'
+     alias -- '+'='pushd .'
+     alias -- '-'='popd'
+   #+END_SRC
+
+** colors
+   #+BEGIN_SRC bash
+     # normal colors
+     RED='\033[00;31m'
+     GREEN='\033[00;32m'
+     YELLOW='\033[00;33m'
+     BLUE='\033[00;34m'
+     PURPLE='\033[00;35m'
+     CYAN='\033[00;36m'
+     LIGHTGRAY='\033[00;37m'
+     WHITE='\033[01;37m'
+     # light colors
+     LRED='\033[01;31m'
+     LGREEN='\033[01;32m'
+     LYELLOW='\033[01;33m'
+     LBLUE='\033[01;34m'
+     LPURPLE='\033[01;35m'
+     LCYAN='\033[01;36m'
+     # reset to default color
+     RESET='\033[0m'
+   #+END_SRC
+
+** completion
+   #+BEGIN_SRC bash
+     # enable completion when not in posix mode
+     if ! shopt -oq posix
+     then
+         if [[ -f /usr/share/bash-completion/bash_completion ]]
+         then
+             . /usr/share/bash-completion/bash_completion
+         elif [[ -f /etc/bash_completion ]]
+         then
+             . /etc/bash_completion
+         fi
+     fi
+   #+END_SRC
+
+** history
+   #+BEGIN_SRC bash
+     # append the the $HISTFILE instead of overwriting it
+     shopt -s histappend
+     # ignore lines which begin with a space and ignore
+     # duplicate history entries
+     HISTCONTROL=ignoreboth
+     # increase history size
+     HISTSIZE=100000
+     HISTFILESIZE="$HISTSIZE"
+   #+END_SRC
+
+** prompt
+   #+BEGIN_SRC bash
+     custom_prompt() {
+         local LAST_EXIT_CODE="$?"
+         if [[ "$LAST_EXIT_CODE" != "0" ]]
+         then
+             LAST_EXIT_CODE="$LRED($LAST_EXIT_CODE)$RESET "
+         else
+             LAST_EXIT_CODE=""
+         fi
+         local USER="$LBLUE\u$RESET"
+         local HOST="$LGREEN\h$RESET"
+         PS1="${LAST_EXIT_CODE}${USER}@${HOST} ${PURPLE}::${RESET} \w ${PURPLE}\$${RESET} "
+     }
+
+     PROMPT_COMMAND=custom_prompt
+   #+END_SRC
+
+** readline
+   #+BEGIN_SRC bash
+     bind "set show-all-if-ambiguous on"
+     bind "set blink-matching-paren on"
+     bind "set completion-ignore-case on"
+     bind "set colored-completion-prefix on"
+   #+END_SRC
+
+** window size
+   #+BEGIN_SRC bash
+     # update window size automatically
+     shopt -s checkwinsize
+   #+END_SRC
+
 * gdb
+  #+BEGIN_SRC gdb-script
+
+  #+END_SRC
+
 * sbcl
+  #+BEGIN_SRC common-lisp
+
+  #+END_SRC
+
