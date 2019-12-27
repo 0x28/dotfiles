@@ -76,6 +76,23 @@ This file contains the configurations for the programs I use.
      fi
    #+END_SRC
 
+** functions
+*** open in default application
+   #+BEGIN_SRC bash
+     o() {
+         if [[ "$#" -eq 0 ]]
+         then
+             xdg-open . &> /dev/null
+         else
+             for PARAM in "$@"
+             do
+                 xdg-open "$PARAM" &> /dev/null
+             done
+
+         fi
+     }
+   #+END_SRC
+
 ** history
    #+BEGIN_SRC bash
      # append the the $HISTFILE instead of overwriting it
