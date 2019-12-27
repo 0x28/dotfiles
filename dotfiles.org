@@ -112,6 +112,24 @@ This file contains the configurations for the programs I use.
      }
    #+END_SRC
 
+*** man pages with color
+   #+BEGIN_SRC bash
+     man() {
+         if [[ -n "$INSIDE_EMACS" ]]
+         then
+             emacsclient -ne "(man \"$*\")"
+         else
+             env \
+                 LESS_TERMCAP_mb=$'\e[01;31m' \
+                 LESS_TERMCAP_md=$'\e[01;31m' \
+                 LESS_TERMCAP_me=$'\e[0m' \
+                 LESS_TERMCAP_ue=$'\e[0m' \
+                 LESS_TERMCAP_us=$'\e[01;32m' \
+                 man "$@"
+         fi
+     }
+   #+END_SRC
+
 ** history
    #+BEGIN_SRC bash
      # append the the $HISTFILE instead of overwriting it
