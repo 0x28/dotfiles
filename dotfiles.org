@@ -179,11 +179,6 @@ This file contains the configurations for the programs I use.
 
   #+END_SRC
 
-* sbcl
-  #+BEGIN_SRC common-lisp
-
-  #+END_SRC
-
 * local variables
   If we save this file the code blocks will be tangled automatically. Existing
   files will be overwritten.
