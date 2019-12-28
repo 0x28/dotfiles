@@ -179,10 +179,31 @@ This file contains the configurations for the programs I use.
 
   #+END_SRC
 
+* scripts
+** open emacs
+   #+BEGIN_SRC bash :tangle ~/bin/oemacs :tangle-mode (identity #o700)
+     #!/usr/bin/env bash
+
+     if ! xdotool search --desktop 0 --class emacs windowactivate
+     then
+         emacsclient -c -a ""
+     fi
+   #+END_SRC
+
+** open terminal
+   #+BEGIN_SRC bash :tangle ~/bin/oterm :tangle-mode (identity #o700)
+     #!/usr/bin/env bash
+
+     if ! xdotool search --desktop 0 --class konsole windowactivate
+     then
+         konsole
+     fi
+   #+END_SRC
+
 * local variables
   If we save this file the code blocks will be tangled automatically. Existing
   files will be overwritten.
 
-# Local Variables:
-# after-save-hook: (org-babel-tangle)
-# End:
+  # Local Variables:
+  # after-save-hook: (org-babel-tangle)
+  # End:
