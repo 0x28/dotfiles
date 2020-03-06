@@ -183,6 +183,31 @@ This file contains the configurations for the programs I use.
       set history filename ~/.gdb_history
   #+END_SRC
 
+* XCompose
+  :PROPERTIES:
+  :header-args: :tangle ~/.XCompose
+  :END:
+  XCompose can be used to enter characters not present in the normal qwerty
+  keyboard layout. The Multi_key is my right alt key.
+
+  #+BEGIN_SRC conf
+    <Multi_key> <a> : "ä"
+    <Multi_key> <A> : "Ä"
+
+    <Multi_key> <u> : "ü"
+    <Multi_key> <U> : "Ü"
+
+    <Multi_key> <o> : "ö"
+    <Multi_key> <O> : "Ö"
+
+    <Multi_key> <s> <s> : "ß"
+    <Multi_key> <S> <S> : "ẞ"
+
+    <Multi_key> <q> : "@"
+
+    <Multi_key> <e> : "€"
+  #+END_SRC
+
 * scripts
 ** open emacs
    #+BEGIN_SRC bash :tangle ~/bin/oemacs :tangle-mode (identity #o700)
