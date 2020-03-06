@@ -105,7 +105,7 @@ This file contains the configurations for the programs I use.
                  printf "updating an openSUSE system ...\\n"
                  sudo zypper update
                  ;;
-             ,*)
+             *)
                  printf "can't update unknown system\\n"
                  ;;
          esac
