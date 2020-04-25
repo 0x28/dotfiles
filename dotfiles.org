@@ -78,7 +78,7 @@ This file contains the configurations for the programs I use.
 
 ** functions
 *** open in default application
-   #+BEGIN_SRC bash
+    #+BEGIN_SRC bash
      o() {
          if [[ "$#" -eq 0 ]]
          then
@@ -91,10 +91,10 @@ This file contains the configurations for the programs I use.
 
          fi
      }
-   #+END_SRC
+    #+END_SRC
 
 *** update system
-   #+BEGIN_SRC bash
+    #+BEGIN_SRC bash
      u() {
          case "$(lsb_release -si)" in
              Debian)
@@ -110,10 +110,10 @@ This file contains the configurations for the programs I use.
                  ;;
          esac
      }
-   #+END_SRC
+    #+END_SRC
 
 *** man pages with color
-   #+BEGIN_SRC bash
+    #+BEGIN_SRC bash
      man() {
          if [[ -n "$INSIDE_EMACS" ]]
          then
@@ -128,7 +128,7 @@ This file contains the configurations for the programs I use.
                  man "$@"
          fi
      }
-   #+END_SRC
+    #+END_SRC
 
 ** history
    #+BEGIN_SRC bash
@@ -176,11 +176,11 @@ This file contains the configurations for the programs I use.
 
 * gdb
   #+BEGIN_SRC gdb-script :tangle ~/.gdbinit
-      set print pretty on
+    set print pretty on
 
-      set history save on
-      set history remove-duplicates 10
-      set history filename ~/.gdb_history
+    set history save on
+    set history remove-duplicates 10
+    set history filename ~/.gdb_history
   #+END_SRC
 
 * XCompose
