@@ -183,6 +183,18 @@ This file contains the configurations for the programs I use.
     set history filename ~/.gdb_history
   #+END_SRC
 
+* git
+  #+BEGIN_SRC conf-unix :tangle ~/.gitconfig
+    # generated from dotfiles.org
+
+    [user]
+        name = 0x28
+        email = none
+    [push]
+        default = matching
+
+  #+END_SRC
+
 * XCompose
   :PROPERTIES:
   :header-args: :tangle ~/.XCompose
