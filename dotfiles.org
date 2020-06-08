@@ -95,21 +95,21 @@ This file contains the configurations for the programs I use.
 
 *** update system
     #+BEGIN_SRC bash
-     u() {
-         case "$(lsb_release -si)" in
-             Debian)
-                 printf "updating a debian system ...\\n"
-                 sudo apt update && sudo apt upgrade
-                 ;;
-             openSUSE)
-                 printf "updating an openSUSE system ...\\n"
-                 sudo zypper update
-                 ;;
-             *)
-                 printf "can't update unknown system\\n"
-                 ;;
-         esac
-     }
+      u() {
+          case "$(lsb_release -si)" in
+              Debian)
+                  printf "updating a debian system ...\\n"
+                  sudo apt update && sudo apt upgrade
+                  ;;
+              openSUSE)
+                  printf "updating an openSUSE system ...\\n"
+                  sudo zypper update
+                  ;;
+              ,*)
+                  printf "can't update unknown system\\n"
+                  ;;
+          esac
+      }
     #+END_SRC
 
 *** man pages with color
