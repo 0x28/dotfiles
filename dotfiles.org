@@ -247,7 +247,7 @@ This file contains the configurations for the programs I use.
 
 * scripts
 ** open emacs
-   #+BEGIN_SRC bash :tangle ~/bin/oemacs :tangle-mode (identity #o700)
+   #+BEGIN_SRC bash :tangle ~/bin/oemacs :tangle-mode (identity #o500)
      #!/usr/bin/env bash
 
      if ! xdotool search --desktop 0 --class emacs windowactivate
@@ -257,7 +257,7 @@ This file contains the configurations for the programs I use.
    #+END_SRC
 
 ** open terminal
-   #+BEGIN_SRC bash :tangle ~/bin/oterm :tangle-mode (identity #o700)
+   #+BEGIN_SRC bash :tangle ~/bin/oterm :tangle-mode (identity #o500)
      #!/usr/bin/env bash
 
      if ! xdotool search --desktop 0 --class konsole windowactivate
