@@ -233,17 +233,17 @@ This file contains the configurations for the programs I use.
   :END:
   The following configuration enables the hyper modifier. Caps lock is disabled.
 
-#+BEGIN_SRC conf
-  ! ------ HYPER ------
-  ! remove lock modifier
-  clear Lock
-  ! caps lock key is now hyper
-  keycode 66 = Hyper_L
-  ! caps lock is not a super key
-  remove mod4 = Hyper_L
-  ! hyper triggers mod3
-  add mod3 = Hyper_L
-#+END_SRC
+  #+BEGIN_SRC conf
+    ! ------ HYPER ------
+    ! remove lock modifier
+    clear Lock
+    ! caps lock key is now hyper
+    keycode 66 = Hyper_L
+    ! caps lock is not a super key
+    remove mod4 = Hyper_L
+    ! hyper triggers mod3
+    add mod3 = Hyper_L
+  #+END_SRC
 
 * scripts
 ** open emacs
