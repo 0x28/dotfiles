@@ -197,7 +197,7 @@ This file contains the configurations for the programs I use.
 
     [user]
         name = 0x28
-        email = none
+        email = 12886563+0x28@users.noreply.github.com
     [push]
         default = matching
 
