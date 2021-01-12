@@ -200,6 +200,8 @@ This file contains the configurations for the programs I use.
         email = 12886563+0x28@users.noreply.github.com
     [push]
         default = matching
+    [pull]
+        rebase = false
 
   #+END_SRC
 
