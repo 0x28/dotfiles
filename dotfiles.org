@@ -100,17 +100,24 @@ This file contains the configurations for the programs I use.
       u() {
           case "$(lsb_release -si)" in
               Debian)
-                  printf "updating a debian system ...\\n"
+                  printf "updating a debian system ...\n"
                   sudo apt update && sudo apt upgrade
                   ;;
               openSUSE)
-                  printf "updating an openSUSE system ...\\n"
+                  printf "updating an openSUSE system ...\n"
                   sudo zypper update
                   ;;
               ,*)
-                  printf "can't update unknown system\\n"
+                  printf "can't update unknown system\n"
                   ;;
           esac
+
+          if command -v flatpak >/dev/null
+          then
+              printf "updating flatpak packages ...\n"
+              flatpak update
+              flatpak uninstall --unused
+          fi
       }
     #+END_SRC
 
