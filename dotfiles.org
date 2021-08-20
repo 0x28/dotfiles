@@ -40,7 +40,7 @@ This file contains the configurations for the programs I use.
      alias -- '+'='pushd .'
      alias -- '-'='popd'
      alias 'f'='fd -H'
-     alias 'which'='command -v'
+     alias 'which'='type'
    #+END_SRC
 
 ** colors
