@@ -39,6 +39,7 @@ This file contains the configurations for the programs I use.
      alias 'lisp'='rlwrap -pGreen -O "\*" -S "λ " -ri -q\" sbcl --noinform'
      alias -- '+'='pushd .'
      alias -- '-'='popd'
+     alias 'which'='command -v'
    #+END_SRC
 
 ** colors
