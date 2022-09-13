@@ -17,8 +17,6 @@ This file contains the configurations for the programs I use.
    #+BEGIN_SRC bash
      # grep colors
      alias 'grep'='grep --color=auto'
-     alias 'egrep'='egrep --color=auto'
-     alias 'fgrep'='fgrep --color=auto'
      # git
      alias 'gaa'='git add --all'
      alias 'gcmsg'='git commit -m'
