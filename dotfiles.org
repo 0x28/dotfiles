@@ -118,6 +118,12 @@ This file contains the configurations for the programs I use.
               flatpak update
               flatpak uninstall --unused
           fi
+
+          if command -v rustup >/dev/null
+          then
+              printf "updating rust ...\n"
+              rustup update
+          fi
       }
     #+END_SRC
 
