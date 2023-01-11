@@ -181,6 +181,12 @@ This file contains the configurations for the programs I use.
      bind "set blink-matching-paren on"
      bind "set completion-ignore-case on"
      bind "set colored-completion-prefix on"
+     bind "set keyseq-timeout 1200"
+
+     bind '"\C-xp": print-last-kbd-macro'
+     bind '"\C-xf": "find . -iname \"**\"\C-b\C-b"'
+     bind '"\ep": previous-history'
+     bind '"\en": next-history'
    #+END_SRC
 
 ** window size
