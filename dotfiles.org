@@ -129,6 +129,7 @@ This file contains the configurations for the programs I use.
 
 *** man pages with color
     #+BEGIN_SRC bash
+     export MANROFFOPT=-c
      man() {
          if [[ -n "$INSIDE_EMACS" ]]
          then
