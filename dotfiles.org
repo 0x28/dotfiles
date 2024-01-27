@@ -228,6 +228,12 @@ This file contains the configurations for the programs I use.
 
   #+END_SRC
 
+* shellcheck
+  #+BEGIN_SRC  conf-unix :tangle ~/.shellcheckrc
+    # enable all possible warnings
+    enable=all
+  #+END_SRC
+
 * XCompose
   :PROPERTIES:
   :header-args: :tangle ~/.XCompose
