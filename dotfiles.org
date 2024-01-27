@@ -21,7 +21,7 @@ This file contains the configurations for the programs I use.
      alias 'gaa'='git add --all'
      alias 'gcmsg'='git commit -m'
      alias 'gd'='git diff'
-     alias 'glog'='git log --graph --pretty="%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset" --abbrev-commit --all'
+     alias 'glog'='git log --graph --pretty="%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cD) %C(bold blue)<%an>%Creset" --abbrev-commit --all'
      alias 'gst'='git status'
      alias 'gro'='cd "$(git rev-parse --show-toplevel)"'
      # other
