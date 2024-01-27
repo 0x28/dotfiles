@@ -29,7 +29,7 @@ This file contains the configurations for the programs I use.
      alias '...'='cd ../..'
      alias '?'='echo $?'
      alias 'c'='clear'
-     alias 'ec'="emacsclient -r -a \"\""
+     alias 'ec'="emacsclient -n -r -a \"\""
      alias 'exip'='curl ifconfig.co'
      alias 'l'='ls --color -Fahl'
      alias 'ls'='ls --color=auto'
