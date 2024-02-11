@@ -31,7 +31,7 @@ This file contains the configurations for the programs I use.
      alias 'c'='clear'
      alias 'ec'="emacsclient -n -r -a \"\""
      alias 'exip'='curl ifconfig.co'
-     alias 'l'='ls --color -Fahl'
+     alias 'l'='ls --color -Fahl --group-directories-first --time-style=long-iso'
      alias 'ls'='ls --color=auto'
      alias 'less'='less -RMI'
      alias 'lisp'='rlwrap -pGreen -O "\*" -S "λ " -ri -q\" sbcl --noinform'
