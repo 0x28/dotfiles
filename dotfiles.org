@@ -156,6 +156,8 @@ This file contains the configurations for the programs I use.
      # increase history size
      HISTSIZE=100000
      HISTFILESIZE="$HISTSIZE"
+     # use C-s for the history search instead of suspend
+     stty -ixon
    #+END_SRC
 
 ** prompt
