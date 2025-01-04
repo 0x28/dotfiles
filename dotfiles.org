@@ -79,6 +79,13 @@ This file contains the configurations for the programs I use.
    #+END_SRC
 
 ** functions
+*** print dash for the width of the terminal
+#+begin_src bash
+  print_separator() {
+     printf "%${COLUMNS}s" | tr ' ' '-'
+  }
+#+end_src
+
 *** open in default application
     #+BEGIN_SRC bash
      o() {
@@ -112,11 +119,15 @@ This file contains the configurations for the programs I use.
                   ;;
           esac
 
+          print_separator
+
           if command -v flatpak >/dev/null
           then
               printf "updating flatpak packages ...\n"
               flatpak update
               flatpak uninstall --unused
+
+              print_separator
           fi
 
           if command -v rustup >/dev/null
