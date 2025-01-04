@@ -277,6 +277,8 @@ This file contains the configurations for the programs I use.
     remove mod4 = Hyper_L
     ! hyper triggers mod3
     add mod3 = Hyper_L
+    ! right alt key is Multi_key
+    keycode 108 = Multi_key Alt_R Meta_R Alt_R Meta_R
   #+END_SRC
 
 * scripts
