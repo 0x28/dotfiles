@@ -241,6 +241,11 @@ This file contains the configurations for the programs I use.
 
   #+END_SRC
 
+  Global ignore for projectile
+  #+begin_src conf-unix :tangle ~/.config/git/ignore
+    .projectile-cache.eld
+  #+end_src
+
 * shellcheck
   #+BEGIN_SRC  conf-unix :tangle ~/.shellcheckrc
     # enable all possible warnings
